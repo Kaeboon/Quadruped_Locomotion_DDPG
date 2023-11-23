@@ -76,7 +76,7 @@ To test our trained policy:
 
 - Inside the jupyter notebook's first code cell, set `TRAINING` variable to `False`, and set the `Policy` variable to `1` or `2` or `3`. For example:
     ```
-    TRAINING = True
+    TRAINING = False
     Policy = 2
     ```
 - Then, run through every cell until the `Main code Cell` to start the testing process.
