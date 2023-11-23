@@ -1,0 +1,21 @@
+# Same requirements as all our previous submission
+
+channels:
+  - defaults
+dependencies:
+  - python=3.6.10
+  - pip
+  - pip:
+    - tensorflow==1.11.0
+    - gym==0.21.0
+    - pyglet==1.5.27
+    - imageio
+    - matplotlib
+    - scipy
+    - numpy
+    - pybullet==3.2.5
+    - jupyter
+
+# Run the following command to create and activate the environment with this file.
+# conda env create -n ME5418_Group18 -f requirements.yml
+# conda activate ME5418_Group18

@@ -1,0 +1,5 @@
+The pybullet_data folder contains model information about aliengo and plane.
+These information is used to import the models into the PyBullet Simulation.
+Model Source: https://github.com/unitreerobotics/unitree_pybullet/tree/master/data
+
+Do not change the relative location of this directory, and the contents inside, as it would affect the code when importing the models. Thank you.
