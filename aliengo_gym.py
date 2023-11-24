@@ -29,7 +29,7 @@ ACTION_REPEAT = 10
 class AliengoEnv(gym.Env):
 
     # Initialise env
-    def __init__(self, render = False, Version = 1):
+    def __init__(self, render = False, Policy = 1):
         # Launch Pybullet and initialize attributes
         if render:
             self._pybullet_client = bullet_client.BulletClient(connection_mode=pybullet.GUI) # This would launch PyBullet Simulation with visualization (PyBullet window will pop out)
@@ -51,7 +51,7 @@ class AliengoEnv(gym.Env):
         self.joint_dict = {} # relate the joint ID used in pybullet Simulation to the joint name
         self.action2joint_idx_dict = {} # relate the index of the action tuple to the joint ID used in pybullet Simulation
         self.num_joints = None
-        self.version = Version
+        self.policy = Policy
 
     def reset(self, reload_urdf = False):
         # This method will reset the environment.
@@ -60,7 +60,7 @@ class AliengoEnv(gym.Env):
 
         if reload_urdf: # If true, then we reload all model into pybullet
             gravity = -9.8
-            if self.version == 3:
+            if self.policy == 3:
                 gravity = 0
             self._pybullet_client.setGravity(0, 0, gravity) # Set PyBullet Gravity
             self.robot = self._pybullet_client.loadURDF(self.script_directory + "/pybullet_data/aliengo/aliengo.urdf",[0.0164, 0.0079, 0.5257], self._pybullet_client.getQuaternionFromEuler([0,0,0])) # we import aliengo robot model using pybullet built-in function
@@ -209,7 +209,7 @@ class AliengoEnv(gym.Env):
 
     def is_terminate(self, pos):
         output = False
-        if self.version == 1: # for V1 and V2 case
+        if self.policy == 1: # for V1 and V2 case
             output = self.get_robot_collision()
             if pos[2] < 0.2:
                 output = True
@@ -228,7 +228,7 @@ class AliengoEnv(gym.Env):
         robot_torso_orientation = state["robot_torso_orientation"] #tuple (rx, ry, rz, rw)
         total_reward = 0
 
-        if self.version == 1: # for V1 case
+        if self.policy == 1: # for V1 case
 
             action_sum = 0
             for i in action:

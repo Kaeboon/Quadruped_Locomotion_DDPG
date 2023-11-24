@@ -106,6 +106,7 @@ tensorboard --logdir tf_summary_save
 - `episode_buffer_save/` - Folder that stores the replay buffer information
 - `README.so` - A readme file with instructions on how to run our code
 - `Trained_Policy_Video.mp4` - Video showcasing our trained policy
+- `report/` - Folder that stores my final report for ME5418
 
 ## Author
 - HO KAE BOON (E0550469@u.nus.edu)

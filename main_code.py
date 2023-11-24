@@ -315,7 +315,7 @@ with tf.device("/cpu:0"): # for now just use cpu to run. Might consider changing
 
     master_network = DDPGNet(observe_size=observe_size, action_size=action_size, TRAINING=TRAINING, gamma=GAMMA, tau=TAU, actor_lr=ACTOR_LR, actor_l2_reg=ACTOR_L2_REG, actor_grad_clip=ACTOR_GRAD_CLIP, critic_lr=CRITIC_LR, critic_l2_reg=CRITIC_L2_REG, critic_grad_clip=CRITIC_GRAD_CLIP, batch_size=BATCH_SIZE)
 
-    gameEnv = AliengoEnv(render = True, Version = Policy) # For us to visualize how each episode runs
+    gameEnv = AliengoEnv(render = True, Policy = Policy) # For us to visualize how each episode runs
     gameEnv.reset(reload_urdf=True) # To import the model in
     noise = OUNoise(MU, THETA, SIGMA, DECAY_R) # initializing OU Noise
     noise.reset() # reset the OU noise
