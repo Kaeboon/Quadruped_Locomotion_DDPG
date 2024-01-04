@@ -1,7 +1,11 @@
 # Quadruped Robot Locomotion with Reinforcement Learning
 
+![image](<Screenshot from 2024-01-04 16-42-44.png>)
+
 This is our final project for ME5418: Machine Learning in Robotics. \
 In this project, we apply Deep Deterministic Policy Gradient (DDPG) to teach a Aliengo quadruped robot to move inside a PyBullet Simulation environment.
+
+You may refer to my report for more information about this project: [HO KAE BOON ME5418 Final Project.pdf](<report/HO KAE BOON ME5418 Final Project.pdf>)
 
 ## Dependencies
 
@@ -30,7 +34,7 @@ conda activate ME5418_Group18
 
 ## Trained policy
 
-We have trained three different policy.  See the `Trained_Policy_Video.mp4` for the demo.
+We have trained three different policy.  See the [Trained_Policy_Video.mp4](Trained_Policy_Video.mp4) for the video demo.
 - Policy 1: A local maximum suboptimal policy. Robot falls forward to the ground.
 - Policy 2: Using simplified reward structure. Robot can crawl forward but slowly deviates from path.
 - Policy 3: Without gravity. Robot can push itself forward slowly.
