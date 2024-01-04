@@ -34,7 +34,7 @@ conda activate ME5418_Group18
 
 ## Trained policy
 
-We have trained three different policy.  See the [Trained_Policy_Video.mp4](Trained_Policy_Video.mp4) for the video demo.
+We have trained three different policy.  You can refer to [Trained_Policy_Video.mp4](Trained_Policy_Video.mp4) or [Youtube_link](https://youtu.be/zgXfKte58To) for the video demo.
 - Policy 1: A local maximum suboptimal policy. Robot falls forward to the ground.
 - Policy 2: Using simplified reward structure. Robot can crawl forward but slowly deviates from path.
 - Policy 3: Without gravity. Robot can push itself forward slowly.
